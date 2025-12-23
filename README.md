@@ -1,159 +1,56 @@
-# NLP, LLM & Text Mining Labs
+# NLP, LLM & Text Mining — My Lab Notes
 
-A comprehensive collection of hands-on labs and tutorials covering Natural Language Processing, Large Language Models, and Text Mining techniques. This course is part of the ESSEC Y3 AIDAMS program.
+These are my hands-on lab notebooks and tutorials from the ESSEC Y3 AIDAMS course on Natural Language Processing, Large Language Models, and Text Mining. I used this repository to run experiments, record results, and learn by doing.
 
-## Course Overview
+## How I use this repo
+- I open the notebooks in Jupyter and run the cells in order to reproduce the exercises.
+- I keep small datasets and output files next to each notebook so I can re-run experiments and compare results.
+- I edit hyperparameters in the notebooks when I need to test alternatives or debug training runs.
 
-This repository contains practical implementations and exercises exploring modern NLP techniques, from foundational concepts to advanced LLM applications. The materials progress from tokenization basics to fine-tuning transformer models.
+## Labs (what I worked on)
+- Lab 1 — Introduction to Tokenization & Embedding: see [Labs/Lab 1 - Introduction to Tokenization & Embedding/introduction_tokenization_embedding.ipynb](Labs/Lab%201%20-%20Introduction%20to%20Tokenization%20%26%20Embedding/introduction_tokenization_embedding.ipynb)
+  - What I practiced: tokenization strategies, Word2Vec/GloVe/FastText embeddings, and embedding visualization.
 
-## Labs
+- Lab 2 — Text Classification with Generative Models: see [Labs/Lab 2 - Text Classification with Generative Models/text_classification_generative_models.ipynb](Labs/Lab%202%20-%20Text%20Classification%20with%20Generative%20Models/text_classification_generative_models.ipynb)
+  - What I practiced: zero-/few-shot classification with LLMs, prompt design, and evaluating generative classifiers.
 
-### Lab 1: Introduction to Tokenization & Embedding
-**File:** `Labs/Lab 1 - Introduction to Tokenization & Embedding/introduction_tokenization_embedding.ipynb`
+- Lab 3 — Clustering & Modeling with LLMs: see [Labs/Lab 3 - Clustering & Modeling with LLMs/clustering_modeling_LLMs.ipynb](Labs/Lab%203%20-%20Clustering%20%26%20Modeling%20with%20LLMs/clustering_modeling_LLMs.ipynb)
+  - What I practiced: creating embeddings with LLMs, semantic similarity, and document clustering.
 
-Introduction to fundamental NLP concepts:
-- Text tokenization techniques
-- Word embeddings and representation learning
-- Word2Vec, GloVe, and FastText
-- Embedding visualization and analysis
+- Lab 4 — LLM's Fine Tuning: see [Labs/Lab 4 - LLM's Fine Tuning/medical_fine_tuning.ipynb](Labs/Lab%204%20-%20LLM%27s%20Fine%20Tuning/medical_fine_tuning.ipynb) and results in [Labs/Lab 4 - LLM's Fine Tuning/evaluation_results.json](Labs/Lab%204%20-%20LLM%27s%20Fine%20Tuning/evaluation_results.json)
+  - What I practiced: preparing domain-specific (medical) data, fine-tuning strategies, and model evaluation.
 
-### Lab 2: Text Classification with Generative Models
-**File:** `Labs/Lab 2 - Text Classification with Generative Models/text_classification_generative_models.ipynb`
+## Tutorials (background and small exercises)
+- TP1 — Mathematics Optimization: [Tutorials/TP1 - Mathematics Optimization/mathematics_optimization.ipynb](Tutorials/TP1%20-%20Mathematics%20Optimization/mathematics_optimization.ipynb) — gradient descent, loss landscapes, and optimization tricks.
+- TP2 — Introduction to Transformers: [Tutorials/TP2 - Introduction to Transformers/introduction_transformers.ipynb](Tutorials/TP2%20-%20Introduction%20to%20Transformers/introduction_transformers.ipynb) — attention, multi-head attention, and transformer basics.
+- TP3 — Text Classification with Transformers: [Tutorials/TP3 - Text Classification with Transformers/transformer_text_classification.ipynb](Tutorials/TP3%20-%20Text%20Classification%20with%20Transformers/transformer_text_classification.ipynb) and training data at [Tutorials/TP3 - Text Classification with Transformers/train.txt](Tutorials/TP3%20-%20Text%20Classification%20with%20Transformers/train.txt)
 
-Text classification using generative approaches:
-- Zero-shot and few-shot classification with LLMs
-- Prompt engineering for classification tasks
-- Comparing different generative models
-- Evaluation metrics and performance analysis
-
-### Lab 3: Clustering & Modeling with LLMs
-**File:** `Labs/Lab 3 - Clustering & Modeling with LLMs/clustering_modeling_LLMs.ipynb`
-
-Advanced clustering and modeling techniques:
-- Text clustering with LLM embeddings
-- Semantic similarity analysis
-- Document clustering evaluation
-- Integration with LLM-generated representations
-
-### Lab 4: LLM Fine-Tuning
-**File:** `Labs/Lab 4 - LLM's Fine Tuning/medical_fine_tuning.ipynb`
-
-Fine-tuning Large Language Models:
-- Domain-specific model adaptation (medical domain)
-- Training data preparation and preprocessing
-- Fine-tuning strategies and hyperparameter tuning
-- Model evaluation and results analysis
-
-**Results:** `Labs/Lab 4 - LLM's Fine Tuning/evaluation_results.json`
-
-## Tutorials
-
-### TP1: Mathematics Optimization
-**File:** `Tutorials/TP1 - Mathematics Optimization/mathematics_optimization.ipynb`
-
-Mathematical foundations for optimization:
-- Gradient descent and variants
-- Loss functions and optimization landscape
-- Backpropagation fundamentals
-- Practical optimization techniques for ML
-
-### TP2: Introduction to Transformers
-**File:** `Tutorials/TP2 - Introduction to Transformers/introduction_transformers.ipynb`
-
-Transformer architecture and mechanisms:
-- Self-attention mechanism
-- Multi-head attention
-- Positional encoding
-- Building blocks of modern NLP models
-
-### TP3: Text Classification with Transformers
-**File:** `Tutorials/TP3 - Text Classification with Transformers/transformer_text_classification.ipynb`
-
-Practical text classification using transformer models:
-- Fine-tuning pre-trained transformer models (BERT, DistilBERT, etc.)
-- Data preparation for transformer-based classification
-- Training and evaluation pipelines
-- Model comparison and performance metrics
-
-**Training Data:** `Tutorials/TP3 - Text Classification with Transformers/train.txt`
-
-## Getting Started
-
-### Prerequisites
-- Python 3.8+
-- Jupyter Notebook or JupyterLab
-- PyTorch or TensorFlow
-- Hugging Face Transformers library
-- Additional NLP libraries (NLTK, spaCy, scikit-learn, etc.)
-
-### Installation
-
-```bash
-# Clone or download the repository
-# Navigate to the project directory
-
-# Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install required packages
-pip install -r requirements.txt
-```
-
-### Running the Notebooks
-
-1. Open Jupyter Notebook or JupyterLab:
-   ```bash
+## Quick start (how I run things)
+1. Create and activate a virtual environment.
+   - Windows:
+     ```powershell
+     python -m venv venv
+     venv\\Scripts\\activate
+     ```
+2. Install dependencies (if `requirements.txt` is provided):
+   ```powershell
+   pip install -r requirements.txt
+   ```
+3. Start Jupyter and open the notebook you want:
+   ```powershell
    jupyter notebook
    ```
+4. Run cells in order. For heavier training, I use a GPU runtime when available.
 
-2. Navigate to the desired lab or tutorial folder
+## Tools and libraries I use
+- Python 3.8+
+- Jupyter Notebook
+- Hugging Face Transformers
+- PyTorch (or TensorFlow depending on the notebook)
+- NLTK, spaCy, scikit-learn, pandas, NumPy, Matplotlib, Seaborn
 
-3. Open the `.ipynb` file and run cells sequentially
-
-## Project Structure
-
-```
-NLP-LLMs-Labs/
-├── Labs/
-│   ├── Lab 1 - Introduction to Tokenization & Embedding/
-│   ├── Lab 2 - Text Classification with Generative Models/
-│   ├── Lab 3 - Clustering & Modeling with LLMs/
-│   └── Lab 4 - LLM's Fine Tuning/
-├── Tutorials/
-│   ├── TP1 - Mathematics Optimization/
-│   ├── TP2 - Introduction to Transformers/
-│   └── TP3 - Text Classification with Transformers/
-└── README.md
-```
-
-## Key Technologies
-
-- **Deep Learning:** PyTorch / TensorFlow
-- **NLP Libraries:** Hugging Face Transformers, NLTK, spaCy
-- **Machine Learning:** scikit-learn
-- **Data Processing:** pandas, NumPy
-- **Visualization:** Matplotlib, Seaborn
-
-## Learning Outcomes
-
-By completing this course, you will:
-- Understand fundamental NLP concepts and techniques
-- Master tokenization and embedding methods
-- Implement text classification pipelines
-- Work with state-of-the-art transformer models
-- Fine-tune LLMs for specific domains
-- Evaluate and compare NLP models
-- Apply optimization techniques to deep learning
-
-## Resources
-
-- [Hugging Face Transformers Documentation](https://huggingface.co/docs/transformers/)
-- [PyTorch Official Documentation](https://pytorch.org/)
-- [NLTK Documentation](https://www.nltk.org/)
-- [Attention Is All You Need Paper](https://arxiv.org/abs/1706.03762)
-
----
-
-**Course:** ESSEC Y3 AIDAMS - NLP, LLM & Text Mining  
-**Last Updated:** December 2025
+## What I learned (summary)
+- The practical differences between tokenization approaches and embedding methods.
+- How to prompt LLMs for classification and evaluate generative outputs.
+- How to build and use embeddings for clustering and semantic search.
+- How to prepare data and fine-tune models for a specific domain (medical).

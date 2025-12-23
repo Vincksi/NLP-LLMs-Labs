@@ -1,146 +1,47 @@
-# NLP & LLM Labs
+# Labs — My Notes and How I Worked Through Them
 
-This folder contains four comprehensive laboratory exercises covering essential topics in Natural Language Processing and Large Language Models.
+This `Labs` folder contains the four hands-on lab notebooks I completed during the ESSEC Y3 AIDAMS course. I used each notebook to experiment, record results, and refine my understanding of practical NLP and LLM workflows.
 
-## Lab Descriptions
+## Lab overview (what I did)
 
-### Lab 1: Introduction to Tokenization & Embedding
-**File:** `introduction_tokenization_embedding.ipynb`
+- Lab 1 — Introduction to Tokenization & Embedding
+  - Notebook: [introduction_tokenization_embedding.ipynb](Lab%201%20-%20Introduction%20to%20Tokenization%20%26%20Embedding/introduction_tokenization_embedding.ipynb)
+  - Focus: I compared tokenization strategies, trained/inspected Word2Vec/GloVe/FastText embeddings, and visualized embedding spaces.
 
-Explore the foundational concepts of NLP through tokenization and embeddings:
-- **Tokenization Techniques**: Learn different tokenization approaches (word-level, subword, character-level)
-- **Word Embeddings**: Understand distributed representations of words
-- **Embedding Models**: Study Word2Vec, GloVe, and FastText algorithms
-- **Visualization**: Analyze and visualize embedding spaces using dimensionality reduction
-- **Applications**: Apply embeddings to downstream NLP tasks
+- Lab 2 — Text Classification with Generative Models
+  - Notebook: [text_classification_generative_models.ipynb](Lab%202%20-%20Text%20Classification%20with%20Generative%20Models/text_classification_generative_models.ipynb)
+  - Focus: I practiced zero-shot and few-shot classification using LLM prompts, iterated on prompts, and evaluated generated outputs.
 
-**Key Concepts:**
-- Text preprocessing and normalization
-- Vocabulary construction
-- Embedding dimensions and their significance
-- Semantic similarity using embeddings
+- Lab 3 — Clustering & Modeling with LLMs
+  - Notebook: [clustering_modeling_LLMs.ipynb](Lab%203%20-%20Clustering%20%26%20Modeling%20with%20LLMs/clustering_modeling_LLMs.ipynb)
+  - Focus: I generated embeddings with LLMs, computed semantic similarities, and experimented with clustering algorithms for document grouping.
 
----
+- Lab 4 — LLM's Fine Tuning
+  - Notebook: [medical_fine_tuning.ipynb](Lab%204%20-%20LLM's%20Fine%20Tuning/medical_fine_tuning.ipynb)
+  - Results: [evaluation_results.json](Lab%204%20-%20LLM's%20Fine%20Tuning/evaluation_results.json)
+  - Focus: I prepared domain-specific medical data, ran fine-tuning experiments, and analyzed evaluation metrics.
 
-### Lab 2: Text Classification with Generative Models
-**File:** `text_classification_generative_models.ipynb`
+## How I ran the labs
 
-Leverage the power of generative language models for text classification:
-- **Zero-shot Classification**: Classify text without task-specific training data
-- **Few-shot Learning**: Use minimal examples for rapid adaptation
-- **Prompt Engineering**: Craft effective prompts for classification tasks
-- **Model Comparison**: Evaluate different generative models (GPT-based, T5, etc.)
-- **Performance Analysis**: Compare accuracy, efficiency, and robustness
-
-**Key Concepts:**
-- In-context learning with LLMs
-- Prompt design strategies
-- Cost-benefit analysis of generative vs. discriminative approaches
-- Evaluation metrics for classification
-
----
-
-### Lab 3: Clustering & Modeling with LLMs
-**File:** `clustering_modeling_LLMs.ipynb`
-
-Apply LLM embeddings to clustering and unsupervised learning tasks:
-- **Text Clustering**: Group similar documents using LLM-generated embeddings
-- **Semantic Similarity**: Measure similarity between texts
-- **Clustering Algorithms**: Implement KMeans, DBSCAN, hierarchical clustering
-- **Evaluation**: Use silhouette scores, Davies-Bouldin index, and other metrics
-- **Visualization**: Create meaningful visualizations of clusters
-
-**Key Concepts:**
-- Dense vector representations from LLMs
-- Clustering quality assessment
-- Optimal cluster number determination
-- Document similarity matrices
-
----
-
-### Lab 4: LLM Fine-Tuning
-**File:** `medical_fine_tuning.ipynb`  
-**Results:** `evaluation_results.json`
-
-Master the process of fine-tuning large language models for domain-specific tasks:
-- **Medical Domain Adaptation**: Fine-tune LLMs for medical text understanding
-- **Data Preparation**: Process and prepare domain-specific training data
-- **Training Pipeline**: Implement efficient fine-tuning strategies
-- **Hyperparameter Optimization**: Tune learning rates, batch sizes, and other parameters
-- **Evaluation**: Assess model performance on domain-specific metrics
-- **Results Analysis**: Review evaluation metrics saved in `evaluation_results.json`
-
-**Key Concepts:**
-- Transfer learning in NLP
-- Domain-specific model adaptation
-- Training stability and convergence
-- Preventing catastrophic forgetting
-- Domain-specific evaluation metrics
-
----
-
-## Learning Progression
-
-The labs are designed to be completed in order:
-
-1. **Start with Lab 1** to understand how text is represented numerically
-2. **Move to Lab 2** to see how modern generative models handle classification
-3. **Continue with Lab 3** to apply embeddings to unsupervised learning
-4. **Finish with Lab 4** to master fine-tuning for specialized applications
-
-## Prerequisites
-
-- Python 3.8 or higher
-- Jupyter Notebook or JupyterLab
-- Key Libraries:
-  - `torch` / `tensorflow` - Deep learning frameworks
-  - `transformers` - Hugging Face Transformers library
-  - `scikit-learn` - Machine learning utilities
-  - `numpy`, `pandas` - Data manipulation
-  - `matplotlib`, `seaborn` - Visualization
-  - `nltk`, `spacy` - NLP utilities
-
-## 🚀 Running the Labs
-
-1. **Install Dependencies**
-   ```bash
+1. Activate a Python virtual environment (Windows example):
+   ```powershell
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+2. Install dependencies if a `requirements.txt` exists:
+   ```powershell
    pip install -r requirements.txt
    ```
-
-2. **Start Jupyter**
-   ```bash
+3. Launch Jupyter and open the notebook I want to run:
+   ```powershell
    jupyter notebook
    ```
+4. Run cells sequentially; change hyperparameters inline for experiments.
 
-3. **Navigate to a Lab**
-   - Open the desired `.ipynb` file
-   - Read through the instructions and explanations
-   - Run cells sequentially (top to bottom)
+Notes: For heavier model runs I use a GPU runtime or reduce batch sizes when running locally.
 
-4. **Experiment and Learn**
-   - Modify parameters to understand their effects
-   - Try different models or datasets
-   - Implement variations of the exercises
+## Tips I picked up
 
-## 📊 Expected Outputs
-
-- **Lab 1**: Embedding visualizations and similarity matrices
-- **Lab 2**: Classification results and model comparison tables
-- **Lab 3**: Cluster visualizations and evaluation metrics
-- **Lab 4**: Training curves, evaluation metrics, and saved model weights in `evaluation_results.json`
-
-## Tips for Success
-
-- **Start Small**: Begin with simple examples before scaling up
-- **Monitor Resources**: Some fine-tuning tasks may require GPU memory
-- **Read Carefully**: Each notebook contains important explanations and context
-- **Experiment**: Try modifying hyperparameters and observe the effects
-- **Document**: Keep notes on your findings and observations
-
-## Additional Resources
-
-- [Hugging Face Transformers Documentation](https://huggingface.co/docs/transformers/)
-- [PyTorch Tutorials](https://pytorch.org/tutorials/)
-- [Attention Is All You Need](https://arxiv.org/abs/1706.03762) - Original Transformer Paper
-- [BERT Paper](https://arxiv.org/abs/1810.04805) - Bidirectional Encoder Representations
-- [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/)
+- Always inspect tokenization outputs before training models — subtle tokenization differences change results.
+- Save model checkpoints and evaluation outputs (like `evaluation_results.json`) to reproduce results later.
+- When prompting LLMs for classification, keep a prompt template and log examples of both good and bad outputs for debugging.
