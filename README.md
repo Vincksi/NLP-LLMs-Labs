@@ -127,7 +127,7 @@ NLP-LLMs-Labs/
 └── README.md
 ```
 
-## 🛠️ Key Technologies
+## Key Technologies
 
 - **Deep Learning:** PyTorch / TensorFlow
 - **NLP Libraries:** Hugging Face Transformers, NLTK, spaCy
